@@ -6,9 +6,19 @@ public class Dollar {
 
     public Dollar(int multiplier) {
         amount = multiplier;
+        //DIFF
     }
 
-    void times(int multiplier){
+    Dollar times(int multiplier){
         amount *=multiplier;
+        return new Dollar(amount);
     }
+
+    public boolean equals(Object object){
+        Dollar dollar = (Dollar)object;
+        return amount==dollar.amount;
+    }
+
+
+
 }
